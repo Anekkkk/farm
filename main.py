@@ -2,17 +2,28 @@ import datetime
 import time
 from keep_alive import keep_alive
 import os
+from replit import tkn
 from essential_generators import DocumentGenerator
 import random
 import discum     
 gen = DocumentGenerator()
-bot = discum.Client(token=os.getenv("TOKEN"), log={"console":True, "file":False})
-
 keep_alive()
 
-channel = "882262153606860890"
+i = 
 
-bot.sendMessage(channel, "Hello :)")
+
+rawchannel = [
+"927091635593027595",
+"927091647332905010",
+"927091653729206283",
+"927091664567296000",
+"927091671685013576",
+"927091696481746985",
+"927091706560663603",
+"927091719726575636",
+"927091734939320331"]
+bot = discum.Client(token= tkn[i], log={"console":True, "file":False})
+bot.sendMessage(str(927091635593027595), "Hello :)")
 
 global dmcs
 dmcs = True
@@ -20,14 +31,8 @@ while dmcs:
       list = [11,19,3]
       
       if int(datetime.datetime.now().hour) in list:
-        bot.sendMessage(channel, '!stop')
-        time.sleep(5)
-        bot.sendMessage(channel, 'owo daily')
-        time.sleep(5)
-        bot.sendMessage(channel, 'owo q')
-        time.sleep(5)
-        bot.sendMessage(channel, 'owo q rr 3')
         for _ in range(4):
+          channel = random.choice(rawchannel)
           bot.sendMessage(channel, 'owo lb all')  
           time.sleep(19)   
           bot.sendMessage(channel, 'owo use 57 71 78')
@@ -46,6 +51,7 @@ while dmcs:
           time.sleep(20)
 
           for _ in range(9):
+            channel = random.choice(rawchannel)
             bot.sendMessage(channel, 'owoh')
             time.sleep(int(random.randrange(10, 20)))
             bot.sendMessage(channel, 'pls beg')
@@ -63,19 +69,7 @@ while dmcs:
           time.sleep(int(random.randrange(600, 1200)))
       
       else: 
-        channel1 = "897809000236732416"
-        channel2 = "897809009833283584"
-        channel3 = "897809018351935538"
-        channel4 = "897809026652438548"
-        channel5 = "897809042284642334"
-        channel6 = "897809053672149013"
-        channel7 = "897809066703872080"
-        channel8 = "897809077571293214"
-        channel9 = "897809087255957565"
-        channel10 ="897809095619379260"
-        list1 = [channel1, channel2, channel3, channel4, channel5, channel6, channel7, channel8, channel9, channel10]
-
-        channelx = random.choice(list1)
+        channelx = random.choice(rawchannel)
 
         for _ in range(15):
           bot.sendMessage(channelx, gen.sentence())
